@@ -1,3 +1,22 @@
+# Compiler C + +
+```
+> Install Visual Studio Code: https://code.visualstudio.com/
+
+> Install minGW (C++ Compiler): https://code.visualstudio.com/docs/cpp/config-mingw
+
+> Steps to setup minGW in windows:
+> 1. Install MSYS2 using the link provided by microsoft
+
+> 2. Open MSYS2, enter the follow command: pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
+
+> 3. Hit Enter for default selection, then type Y and hit Enter to proceed with the installation.
+
+> 4. In your search bar, look for edit Environment Variables and open the setting. In the window bottom right, click Environment Variables. Click on Path in your list of User Variables. Click edit, new, add the following:  C:\msys64\ucrt64\bin
+
+> 5. In your seach bar, look for Command Prompt and open it. Type in gcc --version, g++ --version, and gdb -- version. You should see minGW setup correctly.
+```
+
+
 # Env User x System
 ```
 > 🖥️ User (usuário)
