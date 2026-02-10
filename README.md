@@ -1,3 +1,47 @@
+# Env User x System
+```
+> 🖥️ User (usuário)
+    - funciona apenas na sua conta do Windows
+    - não afeta outros usuários do PC
+    - não precisa ser administrador
+        Exemplo:
+            - Você instala MinGW só pra você programar → usa User PATH
+
+
+> 🖥️ System (sistema)
+    - vale para todos os usuários
+    - programas do sistema também veem
+    - precisa abrir CMD como Administrador
+        Exemplo:
+            - Instalar Git, Java, CMake para todo mundo → usa System PATH
+
+
+> User env → só você
+> System env → todo mundoPensa assim, bem direto:
+```
+
+# Settings values as Env variables
+```
+> cmd: setx PATH "%PATH%;C:\msys64\ucrt64\bin"
+
+> Explicação:
+    - setx → comando para definir variáveis de ambiente permanentemente (para o usuário atual).
+    - %PATH% → mantém todos os caminhos já existentes no Path.
+    - ;C:\msys64\ucrt64\bin → adiciona o novo caminho ao final.
+    ⚠️ Observações importantes:
+        - Depois de usar setx, a mudança não afeta a sessão CMD atual. Você precisa abrir um novo CMD para que a alteração seja reconhecida.
+        - Se você quiser verificar se funcionou: echo %PATH%
+
+
+    > setx PATH "%PATH%;C:\Users\Yuan\miniconda3;C:\Users\Yuan\miniconda3\Scripts;C:\Users\Yuan\miniconda3\Library\bin"
+        - C:\Users\Yuan\miniconda3
+        - C:\Users\Yuan\miniconda3\Scripts
+        - C:\Users\Yuan\miniconda3\Library\bin
+
+    > Em Env user não funciona, usa só no Env variables
+```
+
+
 # System variables
 ```
 C:\Users\PC\miniconda3\Scripts for conda in cmd
